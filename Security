@@ -1,0 +1,11 @@
+# Política de Seguridad de Tornado Predictor MVP
+
+La seguridad es una prioridad en el proyecto `tornado-predictor-mvp`. Aunque este proyecto se encuentra en etapa de MVP (Producto Mínimo Viable), hemos implementado prácticas de "Seguridad desde el Diseño" (Security by Design) para garantizar la integridad, confidencialidad y disponibilidad de los datos.
+
+## Medidas de Seguridad Implementadas
+
+Para asegurar el entorno de desarrollo y la aplicación, hemos aplicado las siguientes medidas:
+
+* **Gestión de Secretos**: No existen credenciales, llaves API o tokens expuestos en el código fuente (hardcoded). Toda la configuración sensible se gestiona a través de variables de entorno seguras.
+* **Auditoría de Dependencias**: El proyecto se somete a auditorías periódicas (utilizando `pip-audit`) para identificar y mitigar vulnerabilidades conocidas en las bibliotecas de terceros.
+* **Seguridad en el Entorno de Desarrollo**: La configuración del `devcontainer` ha sido optimizada para permitir el desarrollo en un entorno aislado, siguiendo las buenas prácticas de la industria y eliminando configuraciones inseguras (como la desactivación innecesaria de protecciones CORS/XSRF en entornos de producción).
